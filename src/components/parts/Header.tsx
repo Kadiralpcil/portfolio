@@ -9,7 +9,7 @@ const Header = () => {
     const handleDownload = () => {
         setDownloading(true);
         const downloadLink = document.createElement('a');
-        downloadLink.href = '/assets/SoftwareDeveloperKadirAlpCv.pdf'; // Dosya yolunu doğru şekilde ayarlayın
+        downloadLink.href = '../../../SoftwareDeveloperKadirAlpCv.pdf'; // Dosya yolunu doğru şekilde ayarlayın
         downloadLink.setAttribute('download', 'SoftwareDeveloperKadirAlpCv.pdf');
         document.body.appendChild(downloadLink);
         downloadLink.click();

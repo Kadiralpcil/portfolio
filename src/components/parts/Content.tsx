@@ -24,9 +24,9 @@ const Content = () => {
                 Software Developer
             </h1>
             <p className='mb-2 text-2xl font-light leading-10 flex flex-wrap '>
-                I am a Software Developer. 2+ years Front-end Developer experiance 💻.
+                I am a Software Developer. 3+ years Front-end Developer experiance 💻.
                 Musician 🎸,
-                Trader 📈
+                Trader 📈,
             </p>
             <SoftwareLanguages />
         </div>

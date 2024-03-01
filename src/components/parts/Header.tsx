@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { FaFile } from 'react-icons/fa';
 import { AvatarImageBuilder } from '@/components/ui/AvatarImageBuilder';
-import imgSrc from '@/../public/assets/ProfilePicture.jpg';
+import imgSrc from '../../../public/ProfilePicture.jpg';
 
 const Header = () => {
     const [downloading, setDownloading] = useState(false);

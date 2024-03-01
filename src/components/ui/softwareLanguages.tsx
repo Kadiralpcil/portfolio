@@ -3,7 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import ReactImg from '../../../public/React.png'
-import NextImg from '../../../public/Next.png'
+import NextImg from '../../../public/next.png'
 import JavaScriptIMg from '../../../public/javaScript.png'
 import TypeScriptImg from '../../../public/TypeScript.png'
 import CImg from '../../../public/CSharp-removebg-preview (1).png'

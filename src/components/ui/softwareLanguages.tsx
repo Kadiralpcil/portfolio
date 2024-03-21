@@ -1,17 +1,15 @@
-"use client"
-
-import React from 'react'
-import Image from 'next/image'
-import ReactImg from '../../../public/React.png'
-import NextImg from '../../../public/next.png'
-import JavaScriptIMg from '../../../public/javaScript.png'
-import TypeScriptImg from '../../../public/TypeScript.png'
-import CImg from '../../../public/CSharp-removebg-preview (1).png'
-import SqlImg from '../../../public/SQL-removebg-preview.png'
-import TailwindImg from '../../../public/Tailwinddpng-removebg-preview.png'
-import BootstrapImg from '../../../public/Bootstrap-removebg-preview.png'
-import CssImg from '../../../public/CSS.png'
-import { useWindowDimensions } from '@/hooks'
+import React from 'react';
+import Image from 'next/image';
+import ReactImg from '../../../public/React.png';
+import NextImg from '../../../public/next.png';
+import JavaScriptIMg from '../../../public/javaScript.png';
+import TypeScriptImg from '../../../public/TypeScript.png';
+import CImg from '../../../public/CSharp-removebg-preview (1).png';
+import SqlImg from '../../../public/SQL-removebg-preview.png';
+import TailwindImg from '../../../public/Tailwinddpng-removebg-preview.png';
+import BootstrapImg from '../../../public/Bootstrap-removebg-preview.png';
+import CssImg from '../../../public/CSS.png';
+import { useWindowDimensions } from '@/hooks';
 
 const SoftwareLanguages = () => {
 
@@ -61,32 +59,30 @@ const SoftwareLanguages = () => {
             img: SqlImg,
             alt: "SQL",
         },
+    ];
 
-    ]
     const [width, height] = useWindowDimensions();
 
     return (
-
-        <div className='flex flex-wrap mt-5 '>
+        <div className='flex flex-wrap mt-5 gap-5 justify-center'>
             {imgArray.map((imgItem, index) =>
-                <div key={index} className={
-                    width > 768 ? "h-[150px] w-[150px] relative mb-4" :
-                        width > 640 ? "h-[120px] w-[150px] relative mb-2" :
-                            "h-[110px] w-[150px] relative mb"}>
-                    <div className='h-[100px] w-[150px] flex justify-center items-center'>
+                <div key={index} className="text-center w-40">
+                    <div className="relative h-40 flex justify-center items-center">
+                        <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 rounded-lg opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <span className="text-white text-lg font-semibold">{imgItem.alt}</span>
+                        </div>
                         <Image
-                            className='w-auto h-auto'
                             src={imgItem.img}
                             alt={imgItem.alt}
-                            width={width > 768 ? 100 : width > 640 ? 80 : 60}
-                            height={width > 768 ? 100 : width > 640 ? 80 : 60}
+                            layout="fill"
+                            objectFit="contain"
+                            className="rounded-lg shadow-md"
                         />
                     </div>
-                    <div className=' absolute flex justify-center w-full bottom-0'>{imgItem.alt}</div>
                 </div>
             )}
         </div>
-    )
-}
+    );
+};
 
-export { SoftwareLanguages }
+export { SoftwareLanguages };

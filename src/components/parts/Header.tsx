@@ -9,7 +9,7 @@ const Header = () => {
     const handleDownload = () => {
         setDownloading(true);
         const downloadLink = document.createElement('a');
-        downloadLink.href = '../../../SoftwareDeveloperKadirAlpCv.pdf'; // Dosya yolunu doğru şekilde ayarlayın
+        downloadLink.href = '../../../SoftwareDeveloperKadirAlpCv.pdf';
         downloadLink.setAttribute('download', 'SoftwareDeveloperKadirAlpCv.pdf');
         document.body.appendChild(downloadLink);
         downloadLink.click();
@@ -17,8 +17,8 @@ const Header = () => {
     };
 
     return (
-        <div className="p-12">
-            <div className="flex justify-between">
+        <div className="p-2 sm:p-12">
+            <div className="flex justify-between md:justify-between md:flex-wrap space-y-2">
                 <AvatarImageBuilder imgSrc={imgSrc} name={'Kadir Alp Çil'} />
                 <button
                     disabled={downloading}

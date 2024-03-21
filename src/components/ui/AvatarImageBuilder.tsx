@@ -9,9 +9,9 @@ interface avatarImageBuilderProps {
 
 const AvatarImageBuilder = ({ imgSrc, name }: avatarImageBuilderProps) => {
     return (
-        <div className='flex items-center hover:text-headerTextHover cursor-pointer'>
+        <div className='flex items-center hover:text-headerTextHover cursor-pointer justify-center '>
             <Image
-                className='rounded-full w-12 h-12'
+                className='rounded-full w-12 h-12 flex '
                 src={imgSrc}
                 alt='test'
                 width={150}

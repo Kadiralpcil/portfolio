@@ -6,11 +6,12 @@ import { Header } from "@/components/parts/Header";
 
 export default function Home() {
 
-  return (
-    <div className='w-[90%] mr-auto ml-auto max-w-[1200px]' >
+  return (<>
+    <div className='sm:w-[90%] mr-auto ml-auto ' >
       <Header />
       <Content />
-      <Footer />
     </div>
+    <Footer />
+  </>
   );
 }

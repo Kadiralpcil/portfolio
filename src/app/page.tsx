@@ -1,17 +1,6 @@
-"use client";
+import React from 'react'
+import { redirect } from 'next/navigation'
 
-import { Content } from "@/components/parts/Content";
-import Footer from "@/components/parts/Footer";
-import { Header } from "@/components/parts/Header";
-
-export default function Home() {
-
-  return (<>
-    <div className='sm:w-[90%] mr-auto ml-auto ' >
-      <Header />
-      <Content />
-    </div>
-    <Footer />
-  </>
-  );
+export default function page() {
+    redirect('/about')
 }

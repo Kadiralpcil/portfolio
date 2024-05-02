@@ -1,14 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
-import ReactImg from '../../../public/React.png';
-import NextImg from '../../../public/next.png';
-import JavaScriptIMg from '../../../public/javaScript.png';
-import TypeScriptImg from '../../../public/TypeScript.png';
-import CImg from '../../../public/CSharp-removebg-preview (1).png';
-import SqlImg from '../../../public/SQL-removebg-preview.png';
-import TailwindImg from '../../../public/Tailwinddpng-removebg-preview.png';
-import BootstrapImg from '../../../public/Bootstrap-removebg-preview.png';
-import CssImg from '../../../public/CSS.png';
+
+import ReactImg from '../../../../../public/React.png';
+import NextImg from '../../../../../public/next.png';
+import JavaScriptIMg from '../../../../../public/javaScript.png';
+import TypeScriptImg from '../../../../../public/TypeScript.png';
+import CImg from '../../../../../public/CSharp-removebg-preview (1).png';
+import SqlImg from '../../../../../public/SQL-removebg-preview.png';
+import TailwindImg from '../../../../../public/Tailwinddpng-removebg-preview.png';
+import BootstrapImg from '../../../../../public/Bootstrap-removebg-preview.png';
+import CssImg from '../../../../../public/CSS.png';
 import { useWindowDimensions } from '@/hooks';
 
 const SoftwareLanguages = () => {

@@ -17,7 +17,7 @@ const AvatarImageBuilder = ({ imgSrc, name }: avatarImageBuilderProps) => {
                 width={150}
                 height={150}
             />
-            <p className='font-bold text-headerText'>
+            <p className='font-bold text-headerText text-xs sm:text-sm md:text-base'>
                 &nbsp;&nbsp;{name}</p>
             &nbsp;
             <svg className="w-6 h-6 fill-verifiedColor" version="1.1" viewBox="0,0,24,24" xmlns="http://www.w3.org/2000/svg">

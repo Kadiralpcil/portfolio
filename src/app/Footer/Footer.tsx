@@ -4,7 +4,7 @@ import { HiOutlineMail } from "react-icons/hi";
 
 const Footer = () => {
     return (
-        <div className="bg-white py-8">
+        <footer className="bg-[#F0F3F4] fixed py-4 bottom-0 w-full">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center">
                 <div className="flex gap-4 mb-4 sm:mb-0">
                     <a href='https://www.instagram.com/kadiralpcil/' target='_blank' rel="noopener noreferrer" className="text-gray-700 hover:text-black transition-all">
@@ -25,7 +25,7 @@ const Footer = () => {
                 </div>
                 <div className="text-gray-700 text-sm">© 2024 Kadır Alp Çil. Tüm Hakları Saklıdır.</div>
             </div>
-        </div>
+        </footer>
     );
 };
 

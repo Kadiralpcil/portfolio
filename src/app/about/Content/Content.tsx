@@ -1,4 +1,4 @@
-import { SoftwareLanguages } from "../ui";
+import { SoftwareLanguages } from "./SoftwareLanguages/softwareLanguages";
 
 const Content = () => {
     return (

@@ -17,14 +17,21 @@ export default function Projects() {
     {
       id: 2,
       name: "Todo App",
-      languages: ["Next.js", "Next Api", "MongoDb", "Tailwind", "JWT"],
+      languages: [
+        "Next.js",
+        "Next Api",
+        "MongoDb",
+        "Tailwind",
+        "JWT",
+        "TypeScript",
+      ],
       img: nothingatall,
       url: "https://todo-app-nine-dusky-49.vercel.app/login",
     },
     {
       id: 3,
       name: "Coin Tracker",
-      languages: ["Next.js", "Next UI", "Tailwind"],
+      languages: ["Next.js", "Next UI", "Tailwind", "TypeScript"],
       img: dogeCoin,
       url: "https://coin-tracker-wine.vercel.app/",
     },

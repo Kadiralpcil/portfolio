@@ -10,6 +10,7 @@ import SqlImg from "../../../../../public/SQL-removebg-preview.png";
 import TailwindImg from "../../../../../public/Tailwinddpng-removebg-preview.png";
 import BootstrapImg from "../../../../../public/Bootstrap-removebg-preview.png";
 import CssImg from "../../../../../public/CSS.png";
+import SassImg from "../../../../../public/Sass.png";
 
 interface imgArray {
   id: number;
@@ -26,6 +27,7 @@ const imgArray = [
   { id: 7, img: CssImg, alt: "CSS" },
   { id: 8, img: CImg, alt: "C#" },
   { id: 9, img: SqlImg, alt: "SQL" },
+  { id: 10, img: SassImg, alt: "Sass" },
 ];
 const LoopedImgArray: imgArray[] = [];
 
@@ -38,24 +40,24 @@ const SoftwareLanguages = () => {
   return (
     <div className="h-screen overflow-hidden flex items-center justify-center max-h-[150px] rounded ">
       <style jsx>{`
-                @keyframes scroll {
-                    0% {
-                        transform: translateX(0);
-                    }
-                    100% {
-                        transform: translateX(-50%);
-                    }
-                }
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
 
-                .scrolling-wrapper {
-                    display: flex;
-                    animation: scroll 200s linear infinite;
-                }
+        .scrolling-wrapper {
+          display: flex;
+          animation: scroll 200s linear infinite;
+        }
 
-                .scrolling-wrapper-inner {
-                    display: flex;
-                }
-            `}</style>
+        .scrolling-wrapper-inner {
+          display: flex;
+        }
+      `}</style>
       <div className="scrolling-wrapper">
         <div className="scrolling-wrapper-inner">
           {LoopedImgArray.concat(LoopedImgArray).map((imgItem, index) => (

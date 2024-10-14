@@ -4,6 +4,8 @@ import Image from "next/image";
 import rickandmortyImg from "../../../public/rickandmorty.jpg";
 import nothingatall from "../../../public/nothing.jpg";
 import dogeCoin from "../../../public/dogecoin.jpg";
+import userList from "../../../public/userList.jpg";
+import starWars from "../../../public/starwars.png";
 
 export default function Projects() {
   const ProjectArray = [
@@ -35,13 +37,33 @@ export default function Projects() {
       img: dogeCoin,
       url: "https://coin-tracker-wine.vercel.app/",
     },
+    {
+      id: 4,
+      name: "User List",
+      languages: [
+        "Next.js",
+        "Next Auth",
+        "Tailwind",
+        "TypeScript",
+        "DevExtreme",
+      ],
+      img: userList,
+      url: "https://user-list-git-main-kadir-alps-projects.vercel.app/login?callbackUrl=%2Fusers",
+    },
+    {
+      id: 5,
+      name: "Star Wars Universe",
+      languages: ["React.js", "Sass", "GraphQL", "Apollo Client"],
+      img: starWars,
+      url: "https://star-wars-chars.vercel.app/",
+    },
   ];
 
   return (
     <div className="p-5 mb-32 ">
       <PageTitle name="Projects" />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-5">
-        {ProjectArray.map((project) => (
+        {ProjectArray.reverse().map((project) => (
           <div
             key={project.id}
             className="border border-gray-300 rounded-lg p-4 relative 

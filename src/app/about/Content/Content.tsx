@@ -1,7 +1,25 @@
 import Projects from "@/app/projects/page";
 import { SoftwareLanguages } from "./SoftwareLanguages/softwareLanguages";
 
+import { IoMdArrowRoundDown } from "react-icons/io";
+import { useState } from "react";
+
 const Content = () => {
+  //States
+  const [loading, setLoading] = useState(false);
+  //Functions
+  const handleDownload = () => {
+    if (loading) {
+      return;
+    }
+    setLoading(true);
+    const downloadLink = document.createElement("a");
+    downloadLink.href = "../../../AlpFrontEndDeveloper.pdf";
+    downloadLink.setAttribute("download", "AlpFrontEndDeveloper.pdf");
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    setLoading(false);
+  };
   return (
     <div className="flex flex-col p-4 sm:pt-8 sm:pl-16 sm:justify-center ">
       <div className="flex items-center mb-4">
@@ -24,6 +42,16 @@ const Content = () => {
         Development 💻. Im also a Musician 🎸 and a Trader 📈.
       </p>
       <SoftwareLanguages />
+      <div className="w-100 flex justify-center ">
+        <div
+          onClick={handleDownload}
+          className="py-2 px-4 bg-blue-500 w-[20em] text-center rounded-lg font-semibold flex items-center justify-center gap-2
+         text-white cursor-pointer hover:bg-blue-700 hover:transition-all hover:scale-105"
+        >
+          <div>Download Resume</div>
+          <IoMdArrowRoundDown />
+        </div>
+      </div>
       <Projects />
     </div>
   );

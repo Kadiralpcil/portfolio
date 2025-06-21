@@ -4,26 +4,26 @@ import { HiOutlineMail } from "react-icons/hi";
 
 const Footer = () => {
     return (
-        <footer className="bg-[#F0F3F4] fixed py-4 bottom-0 w-full">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center">
-                <div className="flex gap-4 mb-4 sm:mb-0">
-                    <a href='https://www.instagram.com/kadiralpcil/' target='_blank' rel="noopener noreferrer" className="text-gray-700 hover:text-black transition-all">
-                        <FaInstagram className="w-8 h-8" />
+        <footer className="bg-white border-t border-gray-100 fixed py-3 bottom-0 w-full z-20">
+            <div className="max-w-4xl mx-auto px-6 flex justify-between items-center">
+                <div className="flex gap-5">
+                    <a href='https://www.instagram.com/kadiralpcil/' target='_blank' rel="noopener noreferrer" className="text-gray-400 hover:text-gray-600 transition-colors duration-200">
+                        <FaInstagram className="w-5 h-5" />
                     </a>
-                    <a href='https://twitter.com/KadirAlpC7' target='_blank' rel="noopener noreferrer" className="text-gray-700 hover:text-black transition-all">
-                        <FaTwitter className="w-8 h-8" />
+                    <a href='https://twitter.com/KadirAlpC7' target='_blank' rel="noopener noreferrer" className="text-gray-400 hover:text-gray-600 transition-colors duration-200">
+                        <FaTwitter className="w-5 h-5" />
                     </a>
-                    <a href='https://github.com/Kadiralpcil' target='_blank' rel="noopener noreferrer" className="text-gray-700 hover:text-black transition-all">
-                        <FaGithub className="w-8 h-8" />
+                    <a href='https://github.com/Kadiralpcil' target='_blank' rel="noopener noreferrer" className="text-gray-400 hover:text-gray-600 transition-colors duration-200">
+                        <FaGithub className="w-5 h-5" />
                     </a>
-                    <a href='https://www.linkedin.com/in/kadiralpcil/' target='_blank' rel="noopener noreferrer" className="text-gray-700 hover:text-black transition-all">
-                        <FaLinkedin className="w-8 h-8" />
+                    <a href='https://www.linkedin.com/in/kadiralpcil/' target='_blank' rel="noopener noreferrer" className="text-gray-400 hover:text-gray-600 transition-colors duration-200">
+                        <FaLinkedin className="w-5 h-5" />
                     </a>
-                    <a href='mailto:Kadiralpcil@outlook.com' className="text-gray-700 hover:text-black transition-all">
-                        <HiOutlineMail className="w-8 h-8" />
+                    <a href='mailto:Kadiralpcil@outlook.com' className="text-gray-400 hover:text-gray-600 transition-colors duration-200">
+                        <HiOutlineMail className="w-5 h-5" />
                     </a>
                 </div>
-                <div className="text-gray-700 text-sm">© 2024 Kadır Alp Çil. Tüm Hakları Saklıdır.</div>
+                <div className="text-gray-400 text-xs font-light">© 2024 Kadır Alp Çil</div>
             </div>
         </footer>
     );

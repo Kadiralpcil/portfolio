@@ -49,7 +49,7 @@ const Content = () => {
               <span className="font-semibold text-blue-600">Software Developer</span>{" "}
               with over 4  years of experience in{" "}
               <span className="font-semibold text-purple-600">Front-end Development</span>{" "}
-              💻. I'm also a{" "}
+              💻. {`I'm also a`}`{" "}
               <span className="font-semibold text-green-600">Musician</span> 🎸 and{" "}
               <span className="font-semibold text-orange-600">Trader</span> 📈.
             </p>

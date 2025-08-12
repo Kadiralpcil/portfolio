@@ -2,28 +2,32 @@
 import React, { useState, useEffect } from "react";
 import { PageTitle } from "@/components";
 import Image from "next/image";
-import rickandmortyImg from "../../../public/rickandmorty.jpg";
-import nothingatall from "../../../public/nothing.jpg";
-import dogeCoin from "../../../public/dogecoin.jpg";
-import userList from "../../../public/userList.jpg";
-import starWars from "../../../public/starwars.png";
-import otp1 from "../../../public/otp1.png";
-import otp2 from "../../../public/otp2.png";
-import ackMrpi from "../../../public/ackMrpi.png";
-import identity from "../../../public/identity/identity.png";
-import Qc from "../../../public/qc/dashboard.png";
-import foodMenu1 from "../../../public/foodmenu/foodmenu1.png";
-import foodMenu2 from "../../../public/foodmenu/foodmenu2.png";
-import foodMenu3 from "../../../public/foodmenu/foodmenu3.png";
-import inspection from "../../../public/inspection/inspectionDashboard.png";
-import marsanMrpi from "../../../public/marsanMRPI/marsanMrpiDashboard.png";
-import ticketSystem from "../../../public/ticket/ticket-dasboard.png";
-import newTicket from "../../../public/ticket/new-ticket.png";
 import { Project } from "@/types";
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Images as string paths
+  const images = {
+    rickandmorty: "/rickandmorty.jpg",
+    nothing: "/nothing.jpg",
+    dogecoin: "/dogecoin.jpg",
+    userList: "/userList.jpg",
+    starwars: "/starwars.png",
+    otp1: "/otp1.png",
+    otp2: "/otp2.png",
+    ackMrpi: "/ackMrpi.png",
+    identity: "/identity/identity.png",
+    qc: "/qc/dashboard.png",
+    foodmenu1: "/foodmenu/foodmenu1.png",
+    foodmenu2: "/foodmenu/foodmenu2.png",
+    foodmenu3: "/foodmenu/foodmenu3.png",
+    inspection: "/inspection/inspectionDashboard.png",
+    marsanMrpi: "/marsanMRPI/marsanMrpiDashboard.png",
+    ticketSystem: "/ticket/ticket-dasboard.png",
+    newTicket: "/ticket/new-ticket.png"
+  };
 
   useEffect(() => {
     const handleEsc = (event: KeyboardEvent) => {
@@ -31,14 +35,12 @@ export default function Projects() {
         setSelectedProject(null);
       }
     };
-
     if (selectedProject !== null) {
       document.addEventListener('keydown', handleEsc);
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
     }
-
     return () => {
       document.removeEventListener('keydown', handleEsc);
       document.body.style.overflow = 'unset';
@@ -137,7 +139,6 @@ export default function Projects() {
           );
       }
     };
-
     return (
       <div className="relative h-64 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
         <div className="text-center">
@@ -157,129 +158,129 @@ export default function Projects() {
     );
   };
 
-const companyProjects: Project[] = [
-  {
-    id: 0,
-    name: "WORKBOOK TERMINAL",
-    company: "ODAK INOVASYON",
-    period: "Oct 2024 – Aug 2025",
-    description: "A terminal application used in the warehouse section of the factory, including modules for shelf tracking, product entry/exit, waste management, and authorization.",
-    languages: ["React Native", "Expo", "TypeScript", "React-Native-Paper"],
-    images: [],
-    responsibilities: "Developed simple and efficient interfaces to streamline warehouse product management processes, indirectly speeding up the shipping process.",
-    category: "Mobile Application"
-  },
-  {
-    id: 1,
-    name: "WORKBOOK ERP System",
-    company: "ODAK INOVASYON",
-    period: "Oct 2024 – Aug 2025",
-    description: "ERP system for multiple high-performance factories with integrated accounting, reporting, and notification features for both factory staff and management.",
-    languages: ["Next.js", "React.js", "TypeScript", "DevExtreme"],
-    images: [],
-    responsibilities: "Designed user interfaces using DevExtreme components and delivered features to meet customer needs and simplify complex production processes.",
-    category: "ERP Development"
-  },
-  {
-    id: 2,
-    name: "ENERJISA B2B REFACTORING",
-    company: "ATOLLA TECH",
-    period: "Aug 2024 – Oct 2024",
-    description: "Refactored Enerjisa's B2B interface for customers with a fully responsive and accessible design.",
-    languages: ["React.js", "TypeScript", "CSS", "Figma"],
-    images: [otp1, otp2],
-    responsibilities: "Translated Figma designs into pixel-perfect, responsive interfaces, improving performance and user experience.",
-    category: "B2B Platform"
-  },
-  {
-    id: 3,
-    name: "FABRIC TRACE",
-    company: "ACEKA HOLDING",
-    period: "Aug 2022 – Aug 2024",
-    description: "An advanced system to track textile products' status, location, and processing times in real time.",
-    languages: ["React.js", "TypeScript", "RTK Query", "Tailwind", "Material UI"],
-    images: [],
-    responsibilities: "Developed the front-end interface with real-time data visibility and seamless user interaction.",
-    category: "Manufacturing Tracking"
-  },
-  {
-    id: 4,
-    name: "MRP-API System",
-    company: "ACEKA HOLDING",
-    period: "Aug 2022 – Aug 2024",
-    description: "Migration of a Windows Form-based MRP system to a modern web platform.",
-    languages: ["React.js", "TypeScript", "RTK Query", "Tailwind", "PrimeReact", "DevExtreme"],
-    images: [ackMrpi],
-    responsibilities: "Implemented warehouse tracking, product quality control, pricing, and packaging workflows on the new platform.",
-    category: "System Migration"
-  },
-  {
-    id: 5,
-    name: "IDENTITY Management",
-    company: "ACEKA HOLDING",
-    period: "Aug 2022 – Aug 2024",
-    description: "Comprehensive web application for managing roles and permissions across multiple projects.",
-    languages: ["React.js", "TypeScript", "RTK Query", "Tailwind", "PrimeReact"],
-    images: [identity],
-    responsibilities: "Developed a role and permission management system to ensure secure and efficient user access control.",
-    category: "Security & Authorization"
-  },
-  {
-    id: 6,
-    name: "QUANTITY CONTROL",
-    company: "ACEKA HOLDING",
-    period: "Aug 2022 – Aug 2024",
-    description: "ERP system for international factories to monitor textile production, quality control, and employee performance.",
-    languages: ["SQL", "React.js", "TypeScript", "C#", "Bootstrap", "RTK Query"],
-    images: [Qc],
-    responsibilities: "Built modules for production tracking, defect monitoring, and employee performance evaluation.",
-    category: "Manufacturing ERP"
-  },
-  {
-    id: 7,
-    name: "FOOD MENU System",
-    company: "ACEKA HOLDING",
-    period: "Aug 2022 – Aug 2024",
-    description: "Interactive digital menu system for restaurants with an admin panel for menu management.",
-    languages: ["React.js", "TypeScript", "Zod", "Tailwind", "NEXT UI"],
-    images: [foodMenu1, foodMenu2, foodMenu3],
-    responsibilities: "Developed the front-end and admin panel, enabling easy menu updates and a visually appealing user interface.",
-    category: "Restaurant Technology"
-  },
-  {
-    id: 8,
-    name: "Inspection",
-    company: "ACEKA HOLDING",
-    period: "Aug 2022 – Aug 2024",
-    description: "A system integrated with Pivot 88 to monitor the status of products after the production process.",
-    languages: ["React.js", "TypeScript", "Zod", "Tailwind", "NEXT UI"],
-    images: [inspection],
-    responsibilities: "Implemented interfaces for post-production product inspections and integrated data from Pivot 88.",
-    category: "Quality Control"
-  },
-  {
-    id: 9,
-    name: "Marsan MRPI",
-    company: "ACEKA HOLDING",
-    period: "Aug 2022 – Aug 2024",
-    description: "A web-based MRP system tailored for Marsan to streamline manufacturing and resource planning processes.",
-    languages: ["React.js", "TypeScript", "Tailwind", "PrimeReact"],
-    images: [marsanMrpi],
-    responsibilities: "Contributed to front-end development, focusing on usability and performance improvements.",
-    category: "MRP System"
-  },
-  {
-    id: 10,
-    name: "Ticket System",
-    company: "ACEKA HOLDING",
-    period: "Aug 2022 – Aug 2024",
-    description: "A request management system allowing users to create, track, close, and report project-related requests.",
-    languages: ["React.js", "TypeScript", "Tailwind"],
-    images: [ticketSystem, newTicket],
-    responsibilities: "Developed the front-end, enabling request submission, tracking, and reporting functionalities.",
-    category: "Workflow Management"
-  }
-];
+  const companyProjects: Project[] = [
+    {
+      id: 0,
+      name: "WORKBOOK TERMINAL",
+      company: "ODAK INOVASYON",
+      period: "Oct 2024 – Aug 2025",
+      description: "A terminal application used in the warehouse section of the factory, including modules for shelf tracking, product entry/exit, waste management, and authorization.",
+      languages: ["React Native", "Expo", "TypeScript", "React-Native-Paper"],
+      images: [],
+      responsibilities: "Developed simple and efficient interfaces to streamline warehouse product management processes, indirectly speeding up the shipping process.",
+      category: "Mobile Application"
+    },
+    {
+      id: 1,
+      name: "WORKBOOK ERP System",
+      company: "ODAK INOVASYON",
+      period: "Oct 2024 – Aug 2025",
+      description: "ERP system for multiple high-performance factories with integrated accounting, reporting, and notification features for both factory staff and management.",
+      languages: ["Next.js", "React.js", "TypeScript", "DevExtreme"],
+      images: [],
+      responsibilities: "Designed user interfaces using DevExtreme components and delivered features to meet customer needs and simplify complex production processes.",
+      category: "ERP Development"
+    },
+    {
+      id: 2,
+      name: "ENERJISA B2B REFACTORING",
+      company: "ATOLLA TECH",
+      period: "Aug 2024 – Oct 2024",
+      description: "Refactored Enerjisa's B2B interface for customers with a fully responsive and accessible design.",
+      languages: ["React.js", "TypeScript", "CSS", "Figma"],
+      images: [images.otp1, images.otp2],
+      responsibilities: "Translated Figma designs into pixel-perfect, responsive interfaces, improving performance and user experience.",
+      category: "B2B Platform"
+    },
+    {
+      id: 3,
+      name: "FABRIC TRACE",
+      company: "ACEKA HOLDING",
+      period: "Aug 2022 – Aug 2024",
+      description: "An advanced system to track textile products' status, location, and processing times in real time.",
+      languages: ["React.js", "TypeScript", "RTK Query", "Tailwind", "Material UI"],
+      images: [],
+      responsibilities: "Developed the front-end interface with real-time data visibility and seamless user interaction.",
+      category: "Manufacturing Tracking"
+    },
+    {
+      id: 4,
+      name: "MRP-API System",
+      company: "ACEKA HOLDING",
+      period: "Aug 2022 – Aug 2024",
+      description: "Migration of a Windows Form-based MRP system to a modern web platform.",
+      languages: ["React.js", "TypeScript", "RTK Query", "Tailwind", "PrimeReact", "DevExtreme"],
+      images: [images.ackMrpi],
+      responsibilities: "Implemented warehouse tracking, product quality control, pricing, and packaging workflows on the new platform.",
+      category: "System Migration"
+    },
+    {
+      id: 5,
+      name: "IDENTITY Management",
+      company: "ACEKA HOLDING",
+      period: "Aug 2022 – Aug 2024",
+      description: "Comprehensive web application for managing roles and permissions across multiple projects.",
+      languages: ["React.js", "TypeScript", "RTK Query", "Tailwind", "PrimeReact"],
+      images: [images.identity],
+      responsibilities: "Developed a role and permission management system to ensure secure and efficient user access control.",
+      category: "Security & Authorization"
+    },
+    {
+      id: 6,
+      name: "QUANTITY CONTROL",
+      company: "ACEKA HOLDING",
+      period: "Aug 2022 – Aug 2024",
+      description: "ERP system for international factories to monitor textile production, quality control, and employee performance.",
+      languages: ["SQL", "React.js", "TypeScript", "C#", "Bootstrap", "RTK Query"],
+      images: [images.qc],
+      responsibilities: "Built modules for production tracking, defect monitoring, and employee performance evaluation.",
+      category: "Manufacturing ERP"
+    },
+    {
+      id: 7,
+      name: "FOOD MENU System",
+      company: "ACEKA HOLDING",
+      period: "Aug 2022 – Aug 2024",
+      description: "Interactive digital menu system for restaurants with an admin panel for menu management.",
+      languages: ["React.js", "TypeScript", "Zod", "Tailwind", "NEXT UI"],
+      images: [images.foodmenu1, images.foodmenu2, images.foodmenu3],
+      responsibilities: "Developed the front-end and admin panel, enabling easy menu updates and a visually appealing user interface.",
+      category: "Restaurant Technology"
+    },
+    {
+      id: 8,
+      name: "Inspection",
+      company: "ACEKA HOLDING",
+      period: "Aug 2022 – Aug 2024",
+      description: "A system integrated with Pivot 88 to monitor the status of products after the production process.",
+      languages: ["React.js", "TypeScript", "Zod", "Tailwind", "NEXT UI"],
+      images: [images.inspection],
+      responsibilities: "Implemented interfaces for post-production product inspections and integrated data from Pivot 88.",
+      category: "Quality Control"
+    },
+    {
+      id: 9,
+      name: "Marsan MRPI",
+      company: "ACEKA HOLDING",
+      period: "Aug 2022 – Aug 2024",
+      description: "A web-based MRP system tailored for Marsan to streamline manufacturing and resource planning processes.",
+      languages: ["React.js", "TypeScript", "Tailwind", "PrimeReact"],
+      images: [images.marsanMrpi],
+      responsibilities: "Contributed to front-end development, focusing on usability and performance improvements.",
+      category: "MRP System"
+    },
+    {
+      id: 10,
+      name: "Ticket System",
+      company: "ACEKA HOLDING",
+      period: "Aug 2022 – Aug 2024",
+      description: "A request management system allowing users to create, track, close, and report project-related requests.",
+      languages: ["React.js", "TypeScript", "Tailwind"],
+      images: [images.ticketSystem, images.newTicket],
+      responsibilities: "Developed the front-end, enabling request submission, tracking, and reporting functionalities.",
+      category: "Workflow Management"
+    }
+  ];
 
   const personalProjects: Project[] = [
     {
@@ -289,7 +290,7 @@ const companyProjects: Project[] = [
       period: "Personal",
       description: "Character search application using Rick and Morty API with filtering.",
       languages: ["React.js", "TypeScript", "Tailwind"],
-      images: [rickandmortyImg],
+      images: [images.rickandmorty],
       url: "https://rick-and-morty-search-box.vercel.app/",
       responsibilities: "Full-stack development",
       category: "API Integration"
@@ -301,7 +302,7 @@ const companyProjects: Project[] = [
       period: "Personal",
       description: "Full-stack todo application with JWT authentication and MongoDB.",
       languages: ["Next.js", "Next Api", "MongoDb", "Tailwind", "JWT", "TypeScript"],
-      images: [nothingatall],
+      images: [images.nothing],
       url: "https://todo-app-nine-dusky-49.vercel.app/login",
       responsibilities: "Full-stack development with authentication",
       category: "Full-Stack"
@@ -313,7 +314,7 @@ const companyProjects: Project[] = [
       period: "Personal",
       description: "Real-time cryptocurrency tracking with price alerts.",
       languages: ["Next.js", "Next UI", "Tailwind", "TypeScript"],
-      images: [dogeCoin],
+      images: [images.dogecoin],
       url: "https://coin-tracker-wine.vercel.app/",
       responsibilities: "Front-end development with API integration",
       category: "FinTech"
@@ -325,7 +326,7 @@ const companyProjects: Project[] = [
       period: "Personal",
       description: "User management system with role-based authentication.",
       languages: ["Next.js", "Next Auth", "Tailwind", "TypeScript", "DevExtreme"],
-      images: [userList],
+      images: [images.userList],
       url: "https://user-list-git-main-kadir-alps-projects.vercel.app/login?callbackUrl=%2Fusers",
       responsibilities: "Authentication and user management",
       category: "Admin Panel"
@@ -337,7 +338,7 @@ const companyProjects: Project[] = [
       period: "Personal",
       description: "Star Wars characters explorer with GraphQL and animations.",
       languages: ["React.js", "Sass", "GraphQL", "Apollo Client"],
-      images: [starWars],
+      images: [images.starwars],
       url: "https://star-wars-chars.vercel.app/",
       responsibilities: "GraphQL integration and character display",
       category: "Entertainment"
@@ -345,6 +346,7 @@ const companyProjects: Project[] = [
   ];
 
   const allProjects = [...companyProjects, ...personalProjects];
+
   const openProject = (projectId: number) => {
     setSelectedProject(projectId);
     setCurrentImageIndex(0);
@@ -411,7 +413,6 @@ const companyProjects: Project[] = [
               {project.category}
             </span>
           </div>
-
           {/* Image Count */}
           {project.images.length > 1 && (
             <div className="absolute bottom-4 right-4">
@@ -421,7 +422,6 @@ const companyProjects: Project[] = [
             </div>
           )}
         </div>
-
         {/* Content */}
         <div className="p-6">
           <div className="mb-4">
@@ -442,7 +442,6 @@ const companyProjects: Project[] = [
               </p>
             </div>
           </div>
-
           {/* Tech Stack with Colors */}
           <div className="mb-6">
             <h4 className="text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
@@ -462,7 +461,6 @@ const companyProjects: Project[] = [
               ))}
             </div>
           </div>
-
           {/* Actions */}
           <div className="flex gap-3">
             {project.images.length > 0 ? (
@@ -521,7 +519,6 @@ const companyProjects: Project[] = [
               <div className="h-px w-20 bg-gradient-to-l from-transparent to-blue-500"></div>
             </div>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {companyProjects.map((project) => (
               <ProjectCard key={project.id} project={project} isProfessional={true} />
@@ -538,7 +535,6 @@ const companyProjects: Project[] = [
               <div className="h-px w-20 bg-gradient-to-l from-transparent to-purple-500"></div>
             </div>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {personalProjects.map((project) => (
               <ProjectCard key={project.id} project={project} isProfessional={false} />
